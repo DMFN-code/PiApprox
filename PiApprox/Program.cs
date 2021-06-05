@@ -42,7 +42,6 @@ namespace PiApprox {
                 line += "═";
             line += "╗";
             Console.WriteLine(line);
-
             // -inside
             for(int i = 0; i < squareSize; ++i) {
                 Console.Write("║");
@@ -62,7 +61,7 @@ namespace PiApprox {
             Console.WriteLine($"Simulation resolution is {res}x{res} mapped to {squareSize}x{squareSize} grid.");
 
             // main loop throwing and drawing points
-            while(true) {
+            while(pointsSquare < 10_000_000) {
                 int x = rand.Next(0, res);
                 int y = rand.Next(0, res);
                 bool inCircle = Math.Sqrt(Math.Pow((x - radius), 2) + Math.Pow((y - radius), 2)) <= radius ? true : false;
@@ -83,6 +82,7 @@ namespace PiApprox {
                 Console.Write("█");
                 Console.ForegroundColor = ConsoleColor.White;
             }
+            Console.ReadLine();
 
             // helper function
             static int map(int value, int fromLow, int fromHigh, int toLow, int toHigh) {
