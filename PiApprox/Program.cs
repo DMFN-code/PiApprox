@@ -30,15 +30,6 @@ namespace PiApprox {
             Console.CursorVisible = false;
             SetWindowPos(MyConsole, 0, 0, 0, 0, 0, SWP_NOSIZE);
 
-            // zeroing for consistency
-            int[,] display = new int[squareSize, squareSize];
-            for(int i = 0; i < squareSize; ++i) {
-                for(int j = 0; j < squareSize; ++j) {
-                    display[i, j] = 0;
-                }
-            }
-
-
             // caption draw
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(0, 0);
