@@ -42,7 +42,6 @@ namespace PiApprox {
                 line += "═";
             line += "╗";
             Console.WriteLine(line);
-
             // -inside
             for(int i = 0; i < squareSize; ++i) {
                 Console.Write("║");
